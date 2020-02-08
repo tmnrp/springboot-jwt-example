@@ -1,0 +1,8 @@
+create folder and run
+npm init
+npm install --save react react-dom
+npm install --save-dev webpack webpack-dev-server webpack-cli
+- webpack.config.js
+npm install --save-dev @babel/core @bable/preset-env @babel/preset-react babel-loader html-webpack-plugin
+- package.json -> babel -> presets [...@babel]
+npm install --save-dev style-loader css-loader scss-loader node-sass

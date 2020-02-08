@@ -12,15 +12,18 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                use: ['babel-loader']
+            },
+            {
+                test: /\.(s*)css$/,
+                exclude: /node_modules/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: './src/index.html'
+            template: './public/index.html'
         })
     ]
 }
