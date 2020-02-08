@@ -1,0 +1,12 @@
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media only screen and (min-width: 992px) {
+  #navbar {
+    .container {
+      margin: 0 2.5rem;
+    }
+  }
+}

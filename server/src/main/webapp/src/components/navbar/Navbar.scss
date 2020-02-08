@@ -1,0 +1,16 @@
+@import "../../resources/styles/index.scss";
+
+#navbar {
+  display: flex;
+  height: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $primary-dark-grey;
+
+  .container {
+    .logo {
+      width: 5rem;
+      height: 2.25rem;
+    }
+  }
+}

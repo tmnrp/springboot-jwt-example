@@ -1,0 +1,16 @@
+@import "./extrasmall";
+@import "./small";
+@import "./medium";
+@import "./large";
+@import "./wide";
+
+$primary-dark-grey: #e3e3e3;
+$primary-light-grey: #f6f6f8;
+$primary-dark-red: #C60021;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}

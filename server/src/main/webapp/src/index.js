@@ -1,10 +1,12 @@
-import './index.scss';
+import './resources/styles/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './components/app/App';
+
 ReactDOM.render(
     <div>
-        <h1>this in index.js</h1>
+        <App />
     </div>,
     document.querySelector('#root')
 );
