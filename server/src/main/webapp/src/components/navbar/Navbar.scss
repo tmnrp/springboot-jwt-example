@@ -1,16 +1,54 @@
 @import "../../resources/styles/index.scss";
 
 #navbar {
+  background-color: $primary-dark-grey;
   display: flex;
   height: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $primary-dark-grey;
+  align-items: center;
 
+  //
   .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+
+    //
     .logo {
       width: 5rem;
-      height: 2.25rem;
+      height: 2rem;
+    }
+
+    //
+    .menu {
+      display: flex;
+      align-items: center;
+
+      //
+      .items {
+        list-style: none;
+        margin: 0 0.2rem;
+
+        //
+        .item {
+          cursor: pointer;
+          border: none;
+          border-radius: 0.25rem;
+          padding: 0.25rem 0.75rem;
+          background-color: $primary-dark-grey;
+          font-size: 1rem;
+          font-weight: bold;
+          color: $primary-dark-red;
+          transition: 0.5s all ease-in-out;
+          outline: none;
+
+          &:hover {
+            color: #fff;
+            background-color: $primary-dark-red;
+            transition: 0.5s all ease-in-out;
+          }
+        }
+      }
     }
   }
 }

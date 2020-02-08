@@ -4,10 +4,7 @@ import Navbar from '../navbar/Navbar';
 
 const App = () => {
     return (
-        <div>
-            <Navbar />
-            Simple App
-        </div>
+        <Navbar />
     );
 };
 

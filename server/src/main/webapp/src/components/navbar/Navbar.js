@@ -11,6 +11,12 @@ const Navbar = () => {
                     src={logo}
                     alt="No img found"
                 />
+                <ul className="menu">
+                    <li className="items"><button className="item">Home</button></li>
+                    <li className="items"><button className="item">Education</button></li>
+                    <li className="items"><button className="item">Experience</button></li>
+                    <li className="items"><button className="item">Projects</button></li>
+                </ul>
             </div>
         </div>
     );
