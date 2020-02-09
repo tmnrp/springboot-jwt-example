@@ -1,8 +1,10 @@
 import './Navbar.scss';
 import React from 'react';
 import logo from '../../resources/images/primary-logo-red.png';
+import HamburgerMenu from '../hamburger-menu/HamburgerMenu';
 
 const Navbar = () => {
+
     return (
         <div id="navbar">
             <div className="container">
@@ -16,6 +18,9 @@ const Navbar = () => {
                     <li className="items"><button className="item">Education</button></li>
                     <li className="items"><button className="item">Experience</button></li>
                     <li className="items"><button className="item">Projects</button></li>
+                    <li className="items">
+                        <HamburgerMenu />
+                    </li>
                 </ul>
             </div>
         </div>

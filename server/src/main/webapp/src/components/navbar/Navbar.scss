@@ -37,15 +37,11 @@
           padding: 0.25rem 0.75rem;
           background-color: $primary-dark-grey;
           font-size: 1rem;
-          font-weight: bold;
           color: $primary-dark-red;
-          transition: 0.5s all ease-in-out;
           outline: none;
 
           &:hover {
-            color: #fff;
-            background-color: $primary-dark-red;
-            transition: 0.5s all ease-in-out;
+            font-weight: bolder;
           }
         }
       }
