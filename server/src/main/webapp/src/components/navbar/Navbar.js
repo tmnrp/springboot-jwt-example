@@ -1,9 +1,25 @@
 import './Navbar.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../resources/images/primary-logo-red.png';
 import HamburgerMenu from '../hamburger-menu/HamburgerMenu';
 
 const Navbar = () => {
+    const [lastActiveMenu, setLastActiveMenu] = useState('menu-home');
+
+    const setIsMenuActive = (event) => {
+        const currentTargetId = event.target.id;
+        removeIsMenuActive();
+        addIsMenuActive(currentTargetId);
+        setLastActiveMenu(currentTargetId);
+    };
+
+    const addIsMenuActive = (currentTargetId) => {
+        document.getElementById(currentTargetId).setAttribute('class', `item isactive`);
+    };
+
+    const removeIsMenuActive = () => {
+        document.getElementById(lastActiveMenu).setAttribute('class', 'item');
+    };
 
     return (
         <div id="navbar">
@@ -13,11 +29,11 @@ const Navbar = () => {
                     src={logo}
                     alt="No img found"
                 />
-                <ul className="menu">
-                    <li className="items"><button className="item">Home</button></li>
-                    <li className="items"><button className="item">Education</button></li>
-                    <li className="items"><button className="item">Experience</button></li>
-                    <li className="items"><button className="item">Projects</button></li>
+                <ul id="menu" className="menu">
+                    <li className="items"><button onClick={setIsMenuActive} id="menu-home" className="item isactive">Home</button></li>
+                    <li className="items"><button onClick={setIsMenuActive} id="menu-edu" className="item">Education</button></li>
+                    <li className="items"><button onClick={setIsMenuActive} id="menu-exp" className="item">Experience</button></li>
+                    <li className="items"><button onClick={setIsMenuActive} id="menu-projects" className="item">Projects</button></li>
                     <li className="items">
                         <HamburgerMenu />
                     </li>
