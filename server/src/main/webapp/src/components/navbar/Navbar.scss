@@ -1,54 +1,46 @@
 @import "../../resources/styles/index.scss";
 
 #navbar {
-  background-color: $primary-dark-grey;
   display: flex;
-  height: 2rem;
   align-items: center;
+  justify-content: space-between;
+  background-color: $primary-dark-grey;
+}
 
-  //
-  .container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    height: 100%;
+#navbar .logo {
+  width: 80px;
+  height: 30px;
+}
 
-    //
-    .logo {
-      width: 5rem;
-      height: 2rem;
-    }
+#navbar .nav-items-container {
+  display: flex;
+}
 
-    //
-    .menu {
-      display: flex;
-      align-items: center;
+#menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
 
-      //
-      .items {
-        list-style: none;
-        margin: 0 0.2rem;
+#menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        //
-        .item {
-          cursor: pointer;
-          border: none;
-          border-radius: 0.25rem;
-          padding: 0.25rem 0.75rem;
-          background-color: $primary-dark-grey;
-          font-size: 1rem;
-          color: $primary-dark-red;
-          outline: none;
+#menu button {
+  border: none;
+  background-color: transparent;
+  color: $primary-dark-red;
+  padding: 0px 10px;
+  outline: none;
 
-          &:hover {
-            font-weight: bolder;
-          }
-        }
-
-        .item.isactive {
-          font-weight: bolder;
-        }
-      }
-    }
+  &:hover {
+    font-weight: bold;
+    cursor: pointer;
   }
+}
+
+#menu .menu-item.isactive {
+  font-weight: bold;
 }

@@ -4,20 +4,20 @@
 */
 
 @media only screen and (max-width: 576px) {
-  #navbar {
-    //
-    .container {
-      margin: 0 1rem;
+  #menu {
+    display: none;
+  }
 
-      //
-      .menu .items .item {
-        display: none;
-      }
+  #navbar .nav-items-container {
+    align-items: flex-end;
+    flex-direction: column !important;
+  }
+  #menu.isactive {
+    display: flex !important;
+    flex-direction: column;
+  }
 
-      //
-      .hamburger-menu {
-        display: flex;
-      }
-    }
+  #menu li {
+    padding: 2px;
   }
 }

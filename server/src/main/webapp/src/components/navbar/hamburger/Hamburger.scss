@@ -1,0 +1,38 @@
+@import "../../../resources/styles/index.scss";
+
+#hamburger-icon {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  margin: 5px;
+}
+
+#hamburger-icon .hamburger-line {
+  width: 16px;
+  height: 2px;
+  background-color: $primary-dark-red;
+  border-radius: 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+#hamburger-icon.isactive .hamburger-line {
+  width: 16px;
+  height: 2px;
+  background-color: $dark-green;
+  border-radius: 5px;
+  transition: 0.5s all ease-in-out;
+}
+
+#hamburger-icon.isactive .hamburger-line:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+#hamburger-icon.isactive .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+#hamburger-icon.isactive .hamburger-line:last-child {
+  transform: translateY(-5px) rotate(-45deg);
+}

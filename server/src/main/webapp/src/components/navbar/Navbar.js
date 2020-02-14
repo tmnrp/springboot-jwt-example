@@ -1,41 +1,36 @@
 import './Navbar.scss';
 import React, { useState } from 'react';
+import Hamburger from './hamburger/Hamburger';
 import logo from '../../resources/images/primary-logo-red.png';
-import HamburgerMenu from '../hamburger-menu/HamburgerMenu';
 
 const Navbar = () => {
-    const [lastActiveMenu, setLastActiveMenu] = useState('menu-home');
-
-    const setIsMenuActive = (event) => {
-        const currentTargetId = event.target.id;
-        removeIsMenuActive();
-        addIsMenuActive(currentTargetId);
-        setLastActiveMenu(currentTargetId);
+    const [isMenuActive, setIsMenuActive] = useState(false);
+    const [lastActiveMenu, setLastActiveMenu] = useState("menu-home");
+    const onMenuClick = (event) => {
+        document.getElementById(lastActiveMenu).classList.toggle("isactive");
+        setLastActiveMenu(event.target.id);
+        document.getElementById(event.target.id).classList.toggle("isactive");
     };
-
-    const addIsMenuActive = (currentTargetId) => {
-        document.getElementById(currentTargetId).setAttribute('class', `item isactive`);
-    };
-
-    const removeIsMenuActive = () => {
-        document.getElementById(lastActiveMenu).setAttribute('class', 'item');
-    };
-
     return (
         <div id="navbar">
-            <div className="container">
-                <img
-                    className="logo"
-                    src={logo}
-                    alt="No img found"
-                />
-                <ul id="menu" className="menu">
-                    <li className="items"><button onClick={setIsMenuActive} id="menu-home" className="item isactive">Home</button></li>
-                    <li className="items"><button onClick={setIsMenuActive} id="menu-edu" className="item">Education</button></li>
-                    <li className="items"><button onClick={setIsMenuActive} id="menu-exp" className="item">Experience</button></li>
-                    <li className="items"><button onClick={setIsMenuActive} id="menu-projects" className="item">Projects</button></li>
-                    <li className="items">
-                        <HamburgerMenu />
+            <img className="logo" src={logo} alt="Mumbai Dev" />
+            <div className="nav-items-container">
+                <Hamburger onHamburgerClick={(isHamburgerActive) => setIsMenuActive(isHamburgerActive)} />
+                <ul
+                    id="menu"
+                    className={isMenuActive ? "menu isactive" : "menu"}
+                >
+                    <li>
+                        <button id="menu-home" className="menu-item isactive" onClick={onMenuClick}>Home</button>
+                    </li>
+                    <li>
+                        <button id="menu-edu" className="menu-item" onClick={onMenuClick}>Education</button>
+                    </li>
+                    <li>
+                        <button id="menu-exp" className="menu-item" onClick={onMenuClick}>Experience</button>
+                    </li>
+                    <li>
+                        <button id="menu-contact" className="menu-item" onClick={onMenuClick}>Contact Us</button>
                     </li>
                 </ul>
             </div>
