@@ -9,7 +9,7 @@
   }
 
   #navbar .nav-items-container {
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column !important;
   }
   #menu.isactive {
@@ -19,5 +19,22 @@
 
   #menu li {
     padding: 2px;
+  }
+
+  .login-modal-title {
+    font-size: 24px !important;
+  }
+
+  .login-container {
+    width: 80% !important;
+    flex-direction: column !important;
+  }
+
+  .left-container {
+    width: 100% !important;
+  }
+
+  .right-container {
+    width: 100% !important;
   }
 }

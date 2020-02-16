@@ -2,9 +2,11 @@
 
 #navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: $primary-dark-grey;
+  padding: 0px 5px;
+  position: sticky;
+  top: 0;
 }
 
 #navbar .logo {
@@ -20,12 +22,14 @@
   display: flex;
   align-items: center;
   list-style: none;
+  z-index: 1;
 }
 
 #menu li {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 #menu button {
@@ -34,13 +38,35 @@
   color: $primary-dark-red;
   padding: 0px 10px;
   outline: none;
+  height: 100%;
 
   &:hover {
     font-weight: bold;
+    color: $dark-green;
     cursor: pointer;
   }
 }
 
 #menu .menu-item.isactive {
   font-weight: bold;
+  color: $primary-dark-red;
+  border-bottom: 2px solid $primary-dark-red;
+
+  &:hover {
+    color: $dark-green;
+    border-bottom: 2px solid $dark-green;
+  }
+}
+
+#navbar .nav-login-container button {
+  border: none;
+  background-color: transparent;
+  color: $primary-dark-red;
+  cursor: pointer;
+  outline: none;
+  margin-top: 7px;
+
+  &:hover {
+    color: $dark-green;
+  }
 }

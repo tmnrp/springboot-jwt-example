@@ -19,10 +19,15 @@
   transition: 0.5s all ease-in-out;
 }
 
+#hamburger-icon:hover .hamburger-line:first-child,
+#hamburger-icon:hover .hamburger-line:nth-child(2),
+#hamburger-icon:hover .hamburger-line:last-child {
+  background-color: $dark-green !important;
+}
+
 #hamburger-icon.isactive .hamburger-line {
   width: 16px;
   height: 2px;
-  background-color: $dark-green;
   border-radius: 5px;
   transition: 0.5s all ease-in-out;
 }
