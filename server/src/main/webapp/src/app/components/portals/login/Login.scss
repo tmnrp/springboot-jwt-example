@@ -1,0 +1,34 @@
+@import "../../../../index.scss";
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+.login-main-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: $primary-dark-grey;
+}
+
+.login-sub-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: $dark-green;
+}
+
+@media only screen and (min-width: 576px) {
+  .modal-content {
+    flex-direction: row !important;
+  }
+}

@@ -1,4 +1,4 @@
-@import "../../../resources/styles/index.scss";
+@import "../../../../../index.scss";
 
 #hamburger-icon {
   display: flex;
@@ -40,4 +40,10 @@
 }
 #hamburger-icon.isactive .hamburger-line:last-child {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+@media only screen and (min-width: 576px) {
+  #hamburger-icon {
+    display: none;
+  }
 }

@@ -1,7 +1,7 @@
 import './App.scss';
 import React, { useState } from 'react';
-import Navbar from '../navbar/Navbar';
-import Login from '../login/Login';
+import Navbar from './components/shared/navbar/Navbar';
+import Login from './components/portals/login/Login';
 
 const App = () => {
 

@@ -1,0 +1,96 @@
+$primary-dark-grey: #fafafa;
+$primary-light-grey: #f6f6f8;
+$primary-dark-red: #c60021;
+$light-green: #80c8bd;
+$dark-green: #006678;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.pd-5 {
+  padding: 5px;
+}
+
+.color-dark-gray {
+  color: $primary-dark-grey;
+}
+.color-light-grey {
+  color: $primary-light-grey;
+}
+.color-dark-green {
+  color: $dark-green;
+}
+.color-light-green {
+  color: $light-green;
+}
+.color-dark-red {
+  color: $primary-dark-red;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(250, 250, 250, 0.9);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+
+  color: $primary-dark-red;
+  &:hover {
+    font-weight: bold;
+    color: $dark-green;
+  }
+}
+
+.header-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 10px;
+}
+
+button.type-red {
+  color: $primary-dark-red;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-green;
+    font-weight: bold;
+  }
+}
+
+button.type-thin-border {
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: $primary-dark-grey;
+  border: 1px solid $primary-dark-grey;
+  background-color: $dark-green;
+  &:hover {
+    color: $primary-dark-grey;
+  }
+}
