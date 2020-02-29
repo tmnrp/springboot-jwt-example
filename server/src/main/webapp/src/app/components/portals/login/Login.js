@@ -1,8 +1,44 @@
 import './Login.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+
+const Login = (props) => {
+    const [showLoginView, setShowLoginView] = useState(true);
+    useEffect(() => googleAuthInit(), []);
+    return ReactDOM.createPortal(
+        <section className="modal-overlay">
+            <div className="modal-close" onClick={() => props.setShowLoginPortal(false)}>&#10006;</div>
+            <div className="modal-content">
+                {
+                    showLoginView ? getSignInView(setShowLoginView) : getSignUpView(setShowLoginView)
+                }
+            </div>
+        </section>, document.getElementById('portal-root')
+    );
+};
+
+const googleAuthInit = () => {
+    gapi.load('auth2', () => {
+        gapi.auth2.init();
+    });
+};
+
+const onSignIn = (event) => {
+    gapi.auth2.getAuthInstance().signIn().then(
+        // success
+        (googleUser) => {
+            // update redux store
+            alert(JSON.stringify(googleUser));
+        },
+
+        // failure
+        (error) => {
+            // notify user
+            console.log('failed', error);
+        });
+};
 
 const getSignInView = (setShowLoginView) => {
     return (
@@ -12,7 +48,7 @@ const getSignInView = (setShowLoginView) => {
                 <div className="sub-text">You can log in to your Mumbai Dev's account here.</div>
 
                 <div className="pd-10"></div>
-                <button className="type-google-login">
+                <button className="type-google-login" onClick={(event) => onSignIn(event)}>
                     <FontAwesomeIcon icon={faGoogle} />
                     <span>
                         Log in with Google
@@ -49,7 +85,6 @@ const getSignInView = (setShowLoginView) => {
 };
 
 const getSignUpView = (setShowLoginView) => {
-
     return (
         <React.Fragment>
             <div className="login-sub-wrap pd-5">
@@ -79,20 +114,6 @@ const getSignUpView = (setShowLoginView) => {
                 </form>
             </div>
         </React.Fragment>
-    );
-};
-
-const Login = (props) => {
-    const [showLoginView, setShowLoginView] = useState(true);
-    return ReactDOM.createPortal(
-        <section className="modal-overlay">
-            <div className="modal-close" onClick={() => props.setShowLoginPortal(false)}>&#10006;</div>
-            <div className="modal-content">
-                {
-                    showLoginView ? getSignInView(setShowLoginView) : getSignUpView(setShowLoginView)
-                }
-            </div>
-        </section>, document.getElementById('portal-root')
     );
 };
 
