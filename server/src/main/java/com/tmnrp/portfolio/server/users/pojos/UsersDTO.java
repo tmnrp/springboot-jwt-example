@@ -1,16 +1,23 @@
-package com.tmnrp.portfolio.server;
+package com.tmnrp.portfolio.server.users.pojos;
 
 import java.util.Date;
+
 import com.tmnrp.portfolio.server.enums.Gender;
 
 public class UsersDTO {
+
 	private String firstName;
 	private String middleName;
 	private String lastName;
 	private String userName;
+	private String email;
 	private String password;
 	private Long mobile;
 	private Date dob;
+	private Date createdAt;
+	private Long createdBy;
+	private Date modifiedAt;
+	private Long modifiedBy;
 	private Gender gender;
 
 	public String getFirstName() {
@@ -45,6 +52,14 @@ public class UsersDTO {
 		this.userName = userName;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -67,6 +82,38 @@ public class UsersDTO {
 
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Long getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(Long createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Date getModifiedAt() {
+		return modifiedAt;
+	}
+
+	public void setModifiedAt(Date modifiedAt) {
+		this.modifiedAt = modifiedAt;
+	}
+
+	public Long getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(Long modifiedBy) {
+		this.modifiedBy = modifiedBy;
 	}
 
 	public Gender getGender() {
