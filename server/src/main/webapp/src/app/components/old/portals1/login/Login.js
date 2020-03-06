@@ -1,7 +1,7 @@
 import './Login.scss';
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { onSignIn } from '../../shared/utils/GoogleAuth';
+import { onSignIn } from '../../shared1/utils/GoogleAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 

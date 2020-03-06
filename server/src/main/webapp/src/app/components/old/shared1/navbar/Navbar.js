@@ -1,6 +1,6 @@
 import './Navbar.scss';
 import React, { useState } from 'react';
-import { signOut } from '../../shared/utils/GoogleAuth';
+import { signOut } from '../utils/GoogleAuth';
 import Hamburger from './hamburger/Hamburger';
 import logo from '../../../../resources/images/primary-logo-red.png';
 

@@ -1,30 +1,17 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/shared/navbar/Navbar';
-import Login from './components/portals/login/Login';
-import { googleAuthInit } from './components/shared/utils/GoogleAuth';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import AuthenticationService from './components/utils/authentication/AuthenticationService';
 
+let authenticationService;
 const App = () => {
-    const [showLoginPortal, setShowLoginPortal] = useState(false);
-    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-    useEffect(() => googleAuthInit(setIsUserLoggedIn), []);
+    authenticationService ? authenticationService : new AuthenticationService();
 
     return (
         <React.Fragment>
-            <Navbar
-                setShowLoginPortal={(showLogin) => setShowLoginPortal(showLogin)}
-                isUserLoggedIn={isUserLoggedIn}
-                setIsUserLoggedIn={setIsUserLoggedIn}
-            />
-            {
-                showLoginPortal
-                    ? <Login
-                        setShowLoginPortal={(showLogin) => setShowLoginPortal(showLogin)}
-                        isUserLoggedIn={isUserLoggedIn}
-                        setIsUserLoggedIn={setIsUserLoggedIn}
-                    />
-                    : <React.Fragment />
-            }
+            <Header authenticationService={authenticationService} />
+            <Footer />
         </React.Fragment>
     );
 };
