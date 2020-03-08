@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const Footer = (props) => {
     return (
-        <div>
+        <div id="tm-footer">
             I am footer
         </div>
     );

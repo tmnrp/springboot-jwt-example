@@ -1,12 +1,10 @@
 @import "./theme.scss";
 $theme: 1;
 
-@if $theme == 1 {
-  $primary-dark: $dark-red-primary;
-  $primary-light: $light-red-primary;
-  $secondary-dark: 1;
-  $secondary-light: 1;
-}
+$primary-dark: $th-bny-raisin-black;
+$primary-light: $th-bny-jet;
+$secondary-dark: $dark-yellow;
+$secondary-light: $light-yellow;
 
 * {
   box-sizing: border-box;
@@ -17,5 +15,36 @@ $theme: 1;
 
 .tm-btn {
   background-color: transparent;
-  border: none;
+  border: 1px solid $secondary-dark;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 5px 15px;
+  color: $secondary-dark;
+
+  &:hover {
+    background-color: $secondary-dark;
+    color: $primary-light;
+    border-radius: 3px;
+  }
+}
+
+.tm-title-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tm-title-subtext {
+  font-size: 12px;
+}
+
+.tm-input-field {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px 10px;
+  margin: 3px 0px;
+  outline-color: $secondary-dark;
+
+  &:hover {
+    border: 1px solid $secondary-dark;
+  }
 }

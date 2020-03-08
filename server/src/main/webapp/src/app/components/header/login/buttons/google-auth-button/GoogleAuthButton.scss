@@ -1,0 +1,29 @@
+@import "../../../../../../index.scss";
+
+#tm-GoogleAuthButton {
+  border: 1px solid $dark-yellow;
+  background-color: $primary-light;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: $secondary-dark;
+
+  &:hover {
+    color: $primary-dark;
+    border: 1px solid $primary-light;
+    background-color: $dark-yellow;
+  }
+}
+
+#tm-GoogleAuthButton svg:first-child {
+  margin: 0 5px;
+}
+
+#tm-GoogleAuthButton div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

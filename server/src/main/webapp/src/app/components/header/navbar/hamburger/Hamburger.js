@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 const Hamburger = (props) => {
     const onHamburgerClick = () => {
         document.getElementById('hamburger-icon').classList.toggle('isactive');
-        const isActive = (document.getElementById('hamburger-icon').className.indexOf('isactive') >= 0) ? true : false;
+        const isActive =
+            (document.getElementById('hamburger-icon').className.indexOf('isactive') >= 0)
+                ? true
+                : false;
         props.onHamburgerClick(isActive);
     };
 

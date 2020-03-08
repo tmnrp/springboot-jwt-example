@@ -2,4 +2,12 @@
 
 #tm-header {
   display: flex;
+  background-color: $primary-light;
+  justify-content: space-between;
+  align-items: center;
+  color: $secondary-dark;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

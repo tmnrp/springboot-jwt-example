@@ -1,0 +1,21 @@
+@import "../../../../../index.scss";
+
+#tm-SignInPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 20px;
+  background-color: $primary-light;
+  padding: 10px;
+  color: $secondary-dark;
+}
+
+.tm-signinpage-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#tm-SignInPage form button {
+  margin-top: 5px;
+}
