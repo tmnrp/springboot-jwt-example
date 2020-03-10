@@ -19,11 +19,12 @@
 
 .tm-modal-close-btn {
   position: absolute;
-  top: 5px;
+  top: 7px;
   right: 15px;
   cursor: pointer;
+  font-size: x-large;
 
-  color: $primary-dark;
+  color: $secondary-dark;
   &:hover {
     font-weight: bold;
     color: $primary-light;

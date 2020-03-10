@@ -1,6 +1,6 @@
 import './Logo.scss';
 import React from 'react';
-import logo from '../../../../resources/images/primary-logo-yellow.png';
+import logo from '../../../../resources/images/primary-logo-red.png';
 
 const Logo = () => {
     return (

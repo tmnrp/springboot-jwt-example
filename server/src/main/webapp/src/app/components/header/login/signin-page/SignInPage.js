@@ -1,6 +1,6 @@
 import './SignInPage.scss';
 import React from 'react';
-import GoogleAuthButton from '../buttons/google-auth-button/GoogleAuthButton';
+import GoogleAuthButton from '../../buttons/google-auth-button/GoogleAuthButton';
 import OrSeperator from '../../../utils/or-seperator/OrSeperator';
 
 const SignInPage = (props) => {

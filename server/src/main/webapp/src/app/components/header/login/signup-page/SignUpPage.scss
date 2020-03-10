@@ -3,3 +3,10 @@
 #tm-SignUpPage {
   background-color: $secondary-light;
 }
+
+
+@media only screen and (min-width: 500px) {
+  #tm-SignUpPage {
+    width: 30%;
+  }
+}

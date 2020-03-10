@@ -2,14 +2,14 @@ import './LoginButton.scss';
 import React from 'react';
 import { connect } from 'react-redux';
 import { showLoginModal } from './actions';
-import LoginModal from '../../login-modal/LoginModal';
+import LoginModal from '../../login/login-modal/LoginModal';
 
 const LoginButton = (props) => {
     return (
         <div>
             <button
                 id="tm-login-btn"
-                className="tm-btn"
+                className="tm-btn tm-btn-primary-outline"
                 onClick={() => props.showLoginModal(true)}
             >Log in</button>
             {

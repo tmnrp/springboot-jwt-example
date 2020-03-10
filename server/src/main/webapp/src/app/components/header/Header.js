@@ -2,7 +2,7 @@ import './Header.scss';
 import React, { useEffect } from 'react';
 import Logo from './logo/Logo';
 import Navbar from './navbar/Navbar';
-import LoginButton from './login/buttons/login-button/LoginButton';
+import LoginButton from './buttons/login-button/LoginButton';
 import User from './user/User';
 import { connect } from 'react-redux';
 
@@ -13,9 +13,11 @@ const Header = (props) => {
         <div id="tm-header">
             <Logo />
             <Navbar />
-            {
-                props.isUserLoggedIn ? <User /> : <LoginButton />
-            }
+            <div className="tm-user-container">
+                {
+                    props.isUserLoggedIn ? <User /> : <LoginButton />
+                }
+            </div>
         </div>
     );
 };

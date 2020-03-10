@@ -1,38 +1,41 @@
 @import "../../../../index.scss";
 
 #tm-navbar {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .tm-menu {
   display: none !important;
   text-align: center;
-  background-color: $secondary-dark;
-  color: $primary-dark;
+  color: $secondary-dark;
   border-radius: 3px;
 }
 
 .tm-menu.isactive {
   display: block !important;
   position: absolute;
-}
-
-.tm-hamburger-container {
-  display: flex;
-  justify-content: center;
+  margin-top: 70px;
+  border-width: thin;
 }
 
 .tm-menu-item {
   list-style: none;
   border-bottom: 1px solid transparent;
 
-  padding: 5px 10px;
+  padding: 5px 40px;
   cursor: pointer;
 
   &:hover {
-    font-weight: bold;
+    color: $primary-dark;
     border-bottom: 1px solid $primary-dark;
   }
+}
+
+.tm-hamburger-container {
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 500px) {
@@ -42,20 +45,25 @@
 
   .tm-menu {
     display: flex !important;
-    background-color: $primary-light;
-    color: $secondary-dark;
+    color: $secondary-dark !important;
   }
 
   .tm-menu.isactive {
+    color: $primary-dark;
     display: flex !important;
     position: relative;
+    margin-top: 0px;
+    margin-left: 27px;
+    border: 1px solid transparent;
   }
 
   .tm-menu-item {
+    padding: 5px 10px;
     border-bottom: 1px solid transparent;
 
     &:hover {
-      border-bottom: 1px solid $secondary-dark;
+      color: $primary-dark;
+      border-bottom: 1px solid $primary-dark;
     }
   }
 }

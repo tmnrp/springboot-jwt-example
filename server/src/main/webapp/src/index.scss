@@ -1,31 +1,53 @@
 @import "./theme.scss";
-$theme: 1;
 
-$primary-dark: $th-bny-raisin-black;
-$primary-light: $th-bny-jet;
-$secondary-dark: $dark-yellow;
-$secondary-light: $light-yellow;
+$primary-dark: $crimson-dark;
+$primary-light: $crimson-light;
+$secondary-dark: $darkslategrey-dark;
+$secondary-light: $darkslategrey-light;
+$ternary-light: $ghostwhite-light;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
+  transition: 0.3s all ease-in-out;
 }
 
 .tm-btn {
-  background-color: transparent;
-  border: 1px solid $secondary-dark;
   cursor: pointer;
-  border-radius: 2px;
   padding: 5px 15px;
-  color: $secondary-dark;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 3px;
+  outline: none;
+}
 
-  &:hover {
-    background-color: $secondary-dark;
-    color: $primary-light;
-    border-radius: 3px;
-  }
+.tm-btn-primary {
+  background-color: $primary-dark;
+  color: $ternary-light;
+}
+.tm-btn-primary-outline {
+  border: 1px solid $primary-dark;
+  color: $primary-dark;
+}
+
+.tm-btn-secondary {
+  background-color: $secondary-dark;
+  color: $ternary-light;
+}
+.tm-btn-secondary-outline {
+  border: 1px solid $secondary-dark;
+  color: $secondary-dark;
+}
+
+.tm-btn-secondary-light {
+  background-color: $secondary-light;
+  color: $ternary-light;
+}
+.tm-btn-secondary-light-outline {
+  border: 1px solid $secondary-light;
+  color: $secondary-dark;
 }
 
 .tm-title-text {
@@ -38,11 +60,11 @@ $secondary-light: $light-yellow;
 }
 
 .tm-input-field {
-  border: 1px solid transparent;
+  border: 1px solid lighten($color: $secondary-light, $amount: 60);
   border-radius: 2px;
   padding: 5px 10px;
   margin: 3px 0px;
-  outline-color: $secondary-dark;
+  outline-color: $secondary-light;
 
   &:hover {
     border: 1px solid $secondary-dark;

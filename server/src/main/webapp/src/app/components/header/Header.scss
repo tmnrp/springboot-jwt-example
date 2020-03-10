@@ -2,7 +2,7 @@
 
 #tm-header {
   display: flex;
-  background-color: $primary-light;
+  background-color: $ternary-light;
   justify-content: space-between;
   align-items: center;
   color: $secondary-dark;
@@ -10,4 +10,10 @@
   position: sticky;
   top: 0;
   z-index: 1;
+
+  height: 50px;
+}
+
+.tm-user-container {
+  margin-right: 10px;
 }

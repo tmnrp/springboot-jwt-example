@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   line-height: 20px;
-  background-color: $primary-light;
+  background-color: $ternary-light;
   padding: 10px;
   color: $secondary-dark;
 }
@@ -18,4 +18,10 @@
 
 #tm-SignInPage form button {
   margin-top: 5px;
+}
+
+@media only screen and (min-width: 500px) {
+  #tm-SignInPage {
+    width: 70%;
+  }
 }

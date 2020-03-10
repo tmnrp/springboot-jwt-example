@@ -1,7 +1,7 @@
 import './BasicPortal.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { showLoginModal } from '../header/login/buttons/login-button/actions';
+import { showLoginModal } from '../header/buttons/login-button/actions';
 import { connect } from 'react-redux';
 
 const BasicPortal = (props) => {
