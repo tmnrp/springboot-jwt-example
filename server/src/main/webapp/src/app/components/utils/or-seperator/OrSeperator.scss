@@ -1,0 +1,9 @@
+@import "../../../../index.scss";
+
+#tm-OrSeperator {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr;
+  align-items: center;
+  margin: 15px;
+}

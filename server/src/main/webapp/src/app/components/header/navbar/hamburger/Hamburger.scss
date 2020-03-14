@@ -14,7 +14,7 @@
 #hamburger-icon .hamburger-line {
   width: 16px;
   height: 2px;
-  background-color: $primary-dark-red;
+  background-color: $secondary-dark;
   border-radius: 5px;
   transition: 0.5s all ease-in-out;
 }
@@ -22,7 +22,7 @@
 #hamburger-icon:hover .hamburger-line:first-child,
 #hamburger-icon:hover .hamburger-line:nth-child(2),
 #hamburger-icon:hover .hamburger-line:last-child {
-  background-color: $dark-green !important;
+  background-color: $primary-light !important;
 }
 
 #hamburger-icon.isactive .hamburger-line {
@@ -42,7 +42,7 @@
   transform: translateY(-5px) rotate(-45deg);
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 500px) {
   #hamburger-icon {
     display: none;
   }

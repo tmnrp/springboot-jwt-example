@@ -1,32 +1,36 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/shared/navbar/Navbar';
-import Login from './components/portals/login/Login';
-import { googleAuthInit } from './components/shared/utils/GoogleAuth';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import { connect } from 'react-redux';
+import { initGoogleAuth2, isUserLoggedIn } from './components/utils/authentication/AuthenticationService';
+import { setWindowGApiReady, setUserLoggedIn } from './components/utils/authentication/actions';
 
-const App = () => {
-    const [showLoginPortal, setShowLoginPortal] = useState(false);
-    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-    useEffect(() => googleAuthInit(setIsUserLoggedIn), []);
+const App = (props) => {
+    const gapiAuthCallback = () => {
+        props.setWindowGApiReady(true);
+        console.log("Google Auth2 init complete");
+
+        // Initial/Page-refresh user check
+        props.setUserLoggedIn(isUserLoggedIn());
+    };
+
+    useEffect(() => {
+        initGoogleAuth2(() => gapiAuthCallback());
+    });
 
     return (
         <React.Fragment>
-            <Navbar
-                setShowLoginPortal={(showLogin) => setShowLoginPortal(showLogin)}
-                isUserLoggedIn={isUserLoggedIn}
-                setIsUserLoggedIn={setIsUserLoggedIn}
-            />
-            {
-                showLoginPortal
-                    ? <Login
-                        setShowLoginPortal={(showLogin) => setShowLoginPortal(showLogin)}
-                        isUserLoggedIn={isUserLoggedIn}
-                        setIsUserLoggedIn={setIsUserLoggedIn}
-                    />
-                    : <React.Fragment />
-            }
+            <Header />
+            <Footer />
         </React.Fragment>
     );
 };
 
-export default App;
+const mapActionToProps = () => {
+    return {
+        setWindowGApiReady: setWindowGApiReady,
+        setUserLoggedIn: setUserLoggedIn
+    };
+};
+export default connect(null, mapActionToProps())(App);

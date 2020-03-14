@@ -1,0 +1,19 @@
+@import "../../../../index.scss";
+
+#tm-user {
+  display: flex;
+}
+
+.tm-user-details-pop-up {
+  visibility: hidden;
+  position: absolute;
+  top: 50px;
+}
+
+.tm-user-name {
+  color: $primary-dark;
+}
+
+#tm-user:hover .tm-user-details-pop-up {
+  visibility: visible;
+}

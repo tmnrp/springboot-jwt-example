@@ -1,0 +1,17 @@
+@import "../../../index.scss";
+
+#tm-footer {
+  color: $primary-light;
+  background-color: $secondary-light;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 75px;
+}
