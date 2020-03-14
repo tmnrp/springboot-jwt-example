@@ -1,17 +1,9 @@
 @import "../../../../index.scss";
 
 #tm-OrSeperator {
-  display: flex;
-  flex-direction: row;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr;
   align-items: center;
-  margin: 10px 0px;
-  color: $secondary-dark;
-}
-
-.tm-or-seperator-line {
-  height: 1px;
-  width: 100%;
-  margin: 0px 10px;
-  background-color: $secondary-dark;
+  margin: 15px;
 }

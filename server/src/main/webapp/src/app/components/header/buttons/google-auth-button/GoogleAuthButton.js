@@ -19,9 +19,11 @@ const GoogleAuthButton = (props) => {
                     }) : false
             }
         >
-            <div>
+            <div className="tm-GoogleAuthButton-container">
                 <FontAwesomeIcon className="tm-google-icon" icon={faGoogle} />
-                <span>Log in with Google</span>
+                <span className="tm-login-btn-text-container">
+                    <span>Log in with Google</span>
+                </span>
             </div>
         </button>
     );

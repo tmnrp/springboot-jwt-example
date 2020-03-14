@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   line-height: 20px;
-  background-color: $ternary-light;
   padding: 10px;
   color: $secondary-dark;
 }
@@ -14,10 +13,35 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.tm-forgot-password {
+  font-size: 16px !important;
+  border-bottom: 1px solid transparent;
+}
+
+.tm-title-subtext {
+  border-bottom: 1px solid transparent;
+}
+.tm-title-subtext:hover {
+  cursor: pointer;
+  outline: none;
+  border-bottom: 1px solid currentColor;
 }
 
 #tm-SignInPage form button {
-  margin-top: 5px;
+  height: 44px;
+  margin-top: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.tm-btn-seperator {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 500px) {
