@@ -31,9 +31,15 @@ const SignInPage = (props) => {
                     />
                 </div>
 
-                <button className="tm-btn tm-btn-secondary-light">Log In</button>
+                <button
+                    className="tm-btn tm-btn-secondary-light"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        console.log("lolwa");
+                    }}
+                >Log In</button>
 
-                <span className="tm-btn-seperator"><hr/></span>
+                <span className="tm-btn-seperator"><hr /></span>
                 <span
                     className="tm-title-subtext tm-forgot-password"
                     onClick={() => props.setShowForgotPassword(true)}
