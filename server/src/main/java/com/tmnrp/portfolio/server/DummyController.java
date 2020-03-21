@@ -30,12 +30,6 @@ public class DummyController {
 	private JWTUtil jwtUtil;
 
 	@ResponseBody
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public Object getRoot() {
-		return "root";
-	}
-
-	@ResponseBody
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public Object getUser() {
 		return "user";
