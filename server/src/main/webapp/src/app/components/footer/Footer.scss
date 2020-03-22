@@ -3,10 +3,6 @@
 #tm-footer {
   color: $primary-light;
   background-color: $secondary-light;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   text-align: center;
 
   display: flex;
@@ -14,4 +10,7 @@
   justify-content: center;
 
   height: 75px;
+
+  bottom:0;
+	top:auto;
 }

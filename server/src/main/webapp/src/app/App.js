@@ -1,6 +1,7 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
 import Header from './components/header/Header';
+import MainContent from './components/main-contents/MainContent';
 import Footer from './components/footer/Footer';
 import { connect } from 'react-redux';
 import { initGoogleAuth2, isUserLoggedIn } from './components/utils/authentication/AuthenticationService';
@@ -20,10 +21,11 @@ const App = (props) => {
     });
 
     return (
-        <React.Fragment>
+        <div id="tm-app-container">
             <Header />
+            <MainContent />
             <Footer />
-        </React.Fragment>
+        </div>
     );
 };
 
