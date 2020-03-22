@@ -16,10 +16,10 @@ $ternary-light: $ghostwhite-light;
 
 #tm-header,
 #tm-footer {
-  position:fixed;
-	width:100%;
-	left:0;
-	top:0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .margin-right-10 {
@@ -73,6 +73,11 @@ $ternary-light: $ghostwhite-light;
 .tm-btn-secondary-light-outline {
   border: 1px solid $secondary-light;
   color: $secondary-dark;
+}
+
+.tm-select {
+  padding: 5px;
+  background-color: white;
 }
 
 .tm-title-text {

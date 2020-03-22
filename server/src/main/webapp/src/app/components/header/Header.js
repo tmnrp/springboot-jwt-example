@@ -7,7 +7,6 @@ import User from './user/User';
 import { connect } from 'react-redux';
 
 const Header = (props) => {
-    console.log("header -> ", props);
 
     return (
         <div id="tm-header">
