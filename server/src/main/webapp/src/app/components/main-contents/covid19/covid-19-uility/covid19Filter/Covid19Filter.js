@@ -1,6 +1,6 @@
 import "./Covid19Filter.scss";
 import React, { useState } from "react";
-import { filterCovid19Data } from "../../../../utils/covid-19-service/Covid19Service";
+import { filterData } from "../../../../utils/covid-19-service/Covid19Service";
 
 const Covid19Filter = props => {
   return (
@@ -22,7 +22,7 @@ const Covid19Filter = props => {
 
 const onFilterChange = (e, setFilterText, setCovid19Data) => {
   setFilterText(e.target.value);
-  setCovid19Data(filterCovid19Data("Country/Region", e.target.value));
+  setCovid19Data(filterData("Country/Region", e.target.value));
 };
 
 export default Covid19Filter;

@@ -1,6 +1,6 @@
 import "./Covid19SortBy.scss";
 import React, { useState } from "react";
-import { sortCovid19Data } from "../../../../utils/covid-19-service/Covid19Service";
+import { sortData } from "../../../../utils/covid-19-service/Covid19Service";
 
 const Covid19SortBy = props => {
   const [sortBy, setSortBy] = useState("Sory By");
@@ -34,7 +34,7 @@ const onSortChange = (
 ) => {
   setInitalRender(false);
   setSortBy(e.target.value);
-  const sortedData = sortCovid19Data(e.target.value);
+  const sortedData = sortData(e.target.value);
   setCovid19Data(sortedData);
   setFilterText("");
 };
@@ -54,7 +54,9 @@ const defaultSortByOptions = () => {
   return (
     <>
       <option>Country/Region</option>
-      <option>Total Cases</option>
+      <option>Confirmed</option>
+      <option>Recovered</option>
+      <option>Death</option>
     </>
   );
 };
