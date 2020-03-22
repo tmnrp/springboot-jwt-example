@@ -1,5 +1,5 @@
 import './Footer.scss';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Footer = (props) => {
     return (

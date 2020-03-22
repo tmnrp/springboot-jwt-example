@@ -1,4 +1,4 @@
-import "./Card.scss";
+import "./CardView.scss";
 import React from "react";
 
 const Card = props => {
