@@ -1,9 +1,18 @@
 import "./Covid19SortBy.scss";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Covid19Context } from "../../Covid19";
 import { sortData } from "../../../../utils/covid-19-service/Covid19Service";
 
 const Covid19SortBy = props => {
-  const [sortBy, setSortBy] = useState("Sory By");
+  const [
+    sortBy,
+    setSortBy,
+    covid19Data,
+    setCovid19Data,
+    setViewBy,
+    filterText,
+    setFilterText
+  ] = useContext(Covid19Context);
   const [initalRender, setInitalRender] = useState(true);
   return (
     <div>
@@ -13,10 +22,10 @@ const Covid19SortBy = props => {
         onChange={e =>
           onSortChange(
             e,
-            props.setCovid19Data,
+            setCovid19Data,
             setSortBy,
             setInitalRender,
-            props.setFilterText
+            setFilterText
           )
         }
       >

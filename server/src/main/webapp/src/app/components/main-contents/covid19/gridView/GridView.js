@@ -1,12 +1,23 @@
 import "./GridView.scss";
-import React from "react";
+import React, { useContext } from "react";
+import { Covid19Context } from "../Covid19";
 
 const GridView = props => {
+  const [
+    sortBy,
+    setSortBy,
+    covid19Data,
+    setCovid19Data,
+    setViewBy,
+    filterText,
+    setFilterText
+  ] = useContext(Covid19Context);
+
   return (
     <div id="tm-GridView">
       <table>
         <tbody>{getHeaders()}</tbody>
-        <tbody>{getRows()}</tbody>
+        <tbody>{getRows(covid19Data)}</tbody>
       </table>
     </div>
   );
@@ -24,8 +35,8 @@ const getHeaders = () => {
   );
 };
 
-const getRows = () => {
-  const dataset = JSON.parse(localStorage.getItem("covid19dataset"));
+const getRows = covid19Data => {
+  const dataset = covid19Data;
   const latestDate = localStorage.getItem("covid19LatestDate");
   return dataset.map((item, i) => {
     return (

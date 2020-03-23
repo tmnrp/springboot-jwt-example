@@ -13,6 +13,7 @@ const ForgotPassword = (props) => {
                     className="tm-input-field"
                     type="text"
                     placeholder="E-mail address"
+                    autoComplete="off"
                 />
             </div>
             <button className="tm-btn tm-btn-secondary-light">Log In</button>
