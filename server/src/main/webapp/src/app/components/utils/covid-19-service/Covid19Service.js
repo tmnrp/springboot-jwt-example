@@ -133,7 +133,7 @@ export const filterData = (filterOn, filterBy) => {
 
 const filterDataByCountry = (filterBy, data) => {
   return data.filter(item => {
-    return item["Country/Region"].toLowerCase().startsWith(filterBy);
+    return item["Country/Region"].toLowerCase().startsWith(filterBy.toLowerCase());
   });
 };
 
